@@ -1,0 +1,145 @@
+.zoo-boxes-shortcode .media .media-body, .zoo-feature-box .media .media-body {
+  width: auto;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
+.media, .media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.zoo-boxes-shortcode .media, .zoo-feature-box .media {
+  vertical-align: middle;
+  display: table;
+  margin-bottom: 0;
+}
+
+.section-heading span:before, .home4-testimonial .title-block:before {
+  left: 50%;
+  right: auto;
+  margin-left: 21px;
+}
+.section-heading span:after, .home4-testimonial .title-block:after {
+  left: auto;
+  right: 50%;
+  margin-right: 21px;
+}
+.section-heading {
+  text-align: center;
+  margin-bottom: 67px !important;
+}
+.zoo-feature-box.style-1 .feature-box-media {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.zoo-banner-image.center-left .banner-content {
+  left: 0;
+  right: auto;
+  top: 50%;
+  transform: translate(0,-50%);
+  padding: 10px 20px;
+}
+
+.zoo-banner-image .banner-media {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.clist {
+  border: 1px solid #e4e8ee;
+  border-top: none;
+  margin-bottom: 30px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.course {
+  background: #fff;
+  min-height: 570px;
+  max-height: 635px;
+  position: relative;
+  -moz-box-shadow: 0 0 5px #bfc3c9;
+  -webkit-box-shadow: 0 0 5px #bfc3c9;
+  box-shadow: 0 0 5px #bfc3c9;
+}
+
+.course_space {
+  padding: 10px 30px 0px 30px;
+  position: relative;
+}
+
+.course h3 {
+  font-size: 17px;
+  font-weight: bold;
+  padding-right: 42px;
+  line-height: 20px;
+}
+
+.course a.img-thumb {
+  position: relative;
+}
+
+.img-thumb {
+  display: block;
+  overflow: hidden;
+}
+
+.section-heading span:before, .home4-testimonial .title-block:before {
+  left: 50%;
+  right: auto;
+  margin-left: 21px;
+}
+
+.section-heading span:before, .section-heading span:after, .home4-testimonial .title-block:before, .home4-testimonial .title-block:after {
+  content: "";
+  height: 1px;
+  background: rgba(230,80,46,0.3);
+  position: absolute;
+  bottom: 6px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.section-heading span, .home4-testimonial .title-block {
+  position: relative;
+  padding-bottom: 20px;
+  background-image: url(//eduhub.wp2.zootemplate.com/wp-content/themes/zoo-eduhub/assets/css/../images/icon-edu.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+a .non
+{
+  pointer-events: none;
+}
+
+
+a.woocommerce-LoopProduct-link
+{
+  color: blue;
+  cursor: default;
+}
+
+.vscroll{
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.ofers{
+  display: flex;
+  flex-wrap: wrap;
+  .item{
+    flex: 0 48%;
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    //border: red solid;
+  }
+}
