@@ -2,12 +2,14 @@
 
 # compiled output
 /dist
-/dist-server
 /tmp
 /out-tsc
 
+/appserver/uploads
 # dependencies
 /node_modules
+/appserver/node_modules
+/appserver/angular
 
 # IDEs and editors
 /.idea
@@ -31,7 +33,6 @@
 /coverage
 /libpeerconnection.log
 npm-debug.log
-yarn-error.log
 testem.log
 /typings
 
@@ -42,3 +43,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+package-lock.json
