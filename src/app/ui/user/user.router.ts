@@ -6,7 +6,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { FileComponentComponent } from '../../file-component/file-component.component';
 import { ForgotPasswordComponent } from '../user/forgot-password/forgot-password.component';
 import { SetNewPasswordComponent } from '../user/set-new-password/set-new-password.component';
-import { LoginComponent } from '../../login/login.component';
+import { LoginComponent } from './login/login.component';
 
 const USER_ROUTER: Routes = [
   // { path: 'load-me', component: CreateUserComponent },

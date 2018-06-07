@@ -1,17 +1,17 @@
 import {Component, OnInit, OnDestroy, ViewChild, AfterViewChecked} from '@angular/core';
 import {NgForm} from '@angular/forms';
-import { HttpWrapperService } from '../services/http/httpService'
+import { HttpWrapperService } from '../../../services/http/httpService'
 import { AuthService } from "angular2-social-login";
 import { Router } from '@angular/router';
 import { LocalStorageService } from 'angular-2-local-storage';
-import {PubSubService} from "../services/pubsub/pubsub";
-import {LocalizationService} from "../services/localization/localization.service";
+import {PubSubService} from "../../../services/pubsub/pubsub";
+import {LocalizationService} from "../../../services/localization/localization.service";
 // import { FacebookService, LoginResponse, LoginOptions, UIResponse, UIParams, FBVideoComponent } from 'ngx-facebook';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: 'login.component.html',
+  styleUrls: ['login.component.css']
 })
 
 export class LoginComponent implements OnDestroy  {

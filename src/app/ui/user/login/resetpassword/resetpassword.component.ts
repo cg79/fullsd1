@@ -1,6 +1,6 @@
 import {Component, OnInit, OnDestroy, ViewChild, AfterViewChecked} from '@angular/core';
 import {NgForm} from '@angular/forms';
-import { HttpWrapperService } from '../../services/http/httpService'
+import { HttpWrapperService } from '../../../../services/http/httpService'
 import { AuthService } from "angular2-social-login";
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { LocalStorageService } from 'angular-2-local-storage';
@@ -8,8 +8,8 @@ import { LocalStorageService } from 'angular-2-local-storage';
 
 @Component({
   selector: 'app-resetpassword',
-  templateUrl: './resetpassword.component.html',
-  styleUrls: ['./resetpassword.component.css']
+  templateUrl: 'resetpassword.component.html',
+  styleUrls: ['resetpassword.component.css']
 })
 
 export class ResetPasswordComponent implements OnDestroy  {

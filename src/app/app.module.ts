@@ -12,11 +12,9 @@ import { HttpWrapperService } from './services/http/httpService'
 import { AppRoutingModule }        from './routes/app-routing.module';
 import { HomeComponent }        from './home/home.component';
 import { NotFoundComponent }        from './not-found/notfound.component';
-import { AboutComponent }  from './about/about.component';
 import { ObjectKeysPipe }  from './pipes/objectKeys.pipe';
 import { EscapeHtmlPipe } from './pipes/keep-html.pipe'
 import { Angular2SocialLoginModule } from 'angular2-social-login';
-// import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './ui/header/header.component';
 import  { TypoComponent } from './ui/type/typo.component';
 import  { HomePresentationComponent } from './ui/homePresentation/homePresentation.component';
@@ -36,12 +34,7 @@ import { CoursesComponent } from './ui/courses/courses.component';
 import {SocketService} from "./services/socket/socketService";
 
 import {UtilsService} from "./services/utils/utilsService";
-// import { CreateUserComponent } from './ui/user/create-user/create-user.component';
-import { ForgotPasswordComponent } from './ui/user/forgot-password/forgot-password.component';
-// import { SetNewPasswordComponent } from './ui/user/set-new-password/set-new-password.component';
-// import { ChangePasswordComponent } from './ui/user/change-password/change-password.component';
-import { ResetPasswordComponent } from './login/resetpassword/resetpassword.component';
-// import { EditUserComponent } from './ui/user/edit-user/edit-user.component';
+import { ResetPasswordComponent } from './ui/user/login/resetpassword/resetpassword.component';
 import { ConfirmEmailComponent } from './ui/user/confirm-email/confirm-email.component';
 
 
@@ -49,7 +42,6 @@ import { ConfirmEmailComponent } from './ui/user/confirm-email/confirm-email.com
 import { ContactComponent } from './contact/contact.component';
 import { ShowContactDialogComponent } from './contact/show-contact-dialog/show-contact-dialog.component';
 
-// import {UserModule} from "./ui/user/user-module";
 
 let providers = {
 
@@ -63,28 +55,19 @@ let providers = {
     AppComponent,
     HomeComponent,
     NotFoundComponent,
-    AboutComponent,
     ObjectKeysPipe,
     EscapeHtmlPipe,
-    // LoginComponent,
     HeaderComponent,
     TypoComponent,
     HomePresentationComponent,
     ResetPasswordComponent,
     FooterComponent,
-    // FileComponentComponent,
     CoursesComponent,
-    // CreateUserComponent,
-    // ForgotPasswordComponent,
-    // SetNewPasswordComponent,
-    // ChangePasswordComponent,
-    // EditUserComponent,
     ConfirmEmailComponent,
     ContactComponent,
     ShowContactDialogComponent,
     InstruireDetailsComponent,
     CollapsibleNewsComponent
-    //
   ],
   imports: [
     Angular2SocialLoginModule,
@@ -98,7 +81,6 @@ let providers = {
     HttpModule,
     ModalModule.forRoot(),
     NgbModule.forRoot()
-    // UserModule
   ],
   providers: [HttpWrapperService, AuthGuard,PubSubService, SocketService, UtilsService, LocalizationService, NewsService ],
   bootstrap: [AppComponent],
