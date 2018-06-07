@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -22,7 +23,7 @@ import { InstruireDetailsComponent } from './instruire/instruire-details/instrui
 import { CollapsibleNewsComponent } from './ui/news-management/collapsible-news/collapsible-news.component';
 import {NewsService} from "./ui/news-management/services/newsService";
 
-import { FooterComponent } from './ui/footer/footer.component';
+// import { FooterComponent } from './ui/footer/footer.component';
 import { LocalStorageModule } from 'angular-2-local-storage';
 
 import {LocalizationService} from "./services/localization/localization.service";
@@ -42,6 +43,9 @@ import { ConfirmEmailComponent } from './ui/user/confirm-email/confirm-email.com
 import { ContactComponent } from './contact/contact.component';
 import { ShowContactDialogComponent } from './contact/show-contact-dialog/show-contact-dialog.component';
 
+import {SharedModule } from './ui/footer/shared-module';
+
+// import * as $ from 'jquery';
 
 let providers = {
 
@@ -61,7 +65,7 @@ let providers = {
     TypoComponent,
     HomePresentationComponent,
     ResetPasswordComponent,
-    FooterComponent,
+    // FooterComponent,
     CoursesComponent,
     ConfirmEmailComponent,
     ContactComponent,
@@ -70,6 +74,8 @@ let providers = {
     CollapsibleNewsComponent
   ],
   imports: [
+    CommonModule,
+    SharedModule,
     Angular2SocialLoginModule,
     AppRoutingModule,
     BrowserModule,
@@ -82,6 +88,7 @@ let providers = {
     ModalModule.forRoot(),
     NgbModule.forRoot()
   ],
+
   providers: [HttpWrapperService, AuthGuard,PubSubService, SocketService, UtilsService, LocalizationService, NewsService ],
   bootstrap: [AppComponent],
   entryComponents: [

@@ -1,15 +1,17 @@
 import {NgModule, ModuleWithProviders} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+// import  {FooterComponent} from '../ui/footer/footer.component';
 import { AboutComponent } from './about.component';
+import {SharedModule } from '../ui/footer/shared-module';
 
 import { aboutRouter } from './about.router';
 
 @NgModule({
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,SharedModule,FormsModule, aboutRouter],
   declarations: [
     AboutComponent
+
   ],
 })
 export class AboutModule {

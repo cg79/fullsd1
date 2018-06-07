@@ -1,5 +1,7 @@
 
 
+
+
 <!--https://getbootstrap.com/docs/3.3/examples/navbar/-->
 <div class="header-wrapper1">
   <!-- most top information -->
@@ -40,14 +42,14 @@
     <nav id="navbar-main" class="navbar1 main-menu1 navbar-default1">
       <!--Brand and toggle get grouped for better mobile display-->
       <div class="navbar-header">
-        <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"-->
-        <!--aria-expanded="false">-->
-        <!--<span class="sr-only">Toggle navigation</span>-->
-        <!--<span class="icon-bar"></span>-->
-        <!--<span class="icon-bar"></span>-->
-        <!--<span class="icon-bar"></span>-->
-        <!--</button>-->
-        <button class="navbar-toggler navbar-toggle collapsed" type="button" (click)="toggleCollapsed()"
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <button class="navbar-toggler1 navbar-toggle collapsed" type="button" (click)="toggleCollapsed()"
                 data-toggle="collapse" data-target="#navbar-collapse-1"
                 aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" ngToggler></span>
@@ -89,9 +91,9 @@
           <!--<li class="navli">-->
             <!--<a routerLink="/education/details" routerLinkActive="active"><i class="ficon fa fa-file-text" aria-hidden="true"></i>{{localizationService.language.menu.collaboration}}</a>-->
           <!--</li>-->
-          <!--<li class="navli">-->
-            <!--<a routerLink="/about" routerLinkActive="active"><i class="ficon fa fa-file-text" aria-hidden="true"></i>{{localizationService.language.menu.despre}}</a>-->
-          <!--</li>-->
+          <li class="navli">
+            <a routerLink="/about" routerLinkActive="active"><i class="ficon fa fa-file-text" aria-hidden="true"></i>{{localizationService.language.menu.despre}}</a>
+          </li>
           <li class="navli" *ngIf="canEditNews">
             <a routerLink="/addNews" routerLinkActive="active"><i class="ficon fa fa-file-text" aria-hidden="true"></i>add
               news</a>

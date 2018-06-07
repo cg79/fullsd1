@@ -5,6 +5,10 @@ header{
   /*background-color: #fcfcfc;*/
 }
 
+.icon-bar{
+  background-color: #888;
+}
+
 .lang{
   padding-top: 15px;
   padding-bottom: 15px;
