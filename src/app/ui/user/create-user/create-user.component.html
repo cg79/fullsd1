@@ -1,7 +1,7 @@
 <div class="container1">
 
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-5">
 
     </div>
     <div class="col-md-4">
@@ -103,16 +103,16 @@
                      [value]=0
                      [(ngModel)]=ui.userOrCompany>
               <label for="control_01">
-                <h2>Persoana fizica</h2>
-                <p>Inregistrare cu scopul de a participa la cursuri.</p>
+                <h2>{{localizationService.language.create_user_screen.pf}}</h2>
+                <!--<p>Inregistrare cu scopul de a participa la cursuri.</p>-->
               </label>
             </div>
             <div>
               <input type="radio" id="control_02" name="select" [value]=1
                      [(ngModel)]=ui.userOrCompany>
               <label for="control_02">
-                <h2>Firma</h2>
-                <p>Inregistare ca reprezentant a unei firme IT.</p>
+                <h2>{{localizationService.language.create_user_screen.company}}</h2>
+                <!--<p>Inregistare ca reprezentant a unei firme IT.</p>-->
               </label>
             </div>
           </section>
@@ -121,13 +121,13 @@
           <div class="form-group" >
               <div class="col-md-6">
                 <div class="row">
-              <label for="numeFirma">Nume firma</label>
+              <label for="numeFirma">{{localizationService.language.create_user_screen.cmpName}}</label>
               <input type="text"
                      name="numeFirma"
                      id="numeFirma"
                      disabled="{{ui.userOrCompany == 0}}"
                      class="form-control"
-                     placeholder="Nume firma"
+                     placeholder={{localizationService.language.create_user_screen.cmpName}}
                      required
                      [(ngModel)]="ui.companyName"
               >
@@ -143,25 +143,25 @@
 
               </div>
 
-              <div class="row">
-              <input type="checkbox"
-                     name="allowLogo"
-                     class="mychk"
-                     id="allowLogo"
-                     [(ngModel)]="ui.allowLogo"
-                     disabled="{{ui.userOrCompany == 0}}"
-              > <label for="allowLogo"> Logo-ul poate sa apara pe site</label>
-              </div>
+              <!--<div class="row">-->
+              <!--<input type="checkbox"-->
+                     <!--name="allowLogo"-->
+                     <!--class="mychk"-->
+                     <!--id="allowLogo"-->
+                     <!--[(ngModel)]="ui.allowLogo"-->
+                     <!--disabled="{{ui.userOrCompany == 0}}"-->
+              <!--&gt; <label for="allowLogo"> Logo-ul poate sa apara pe site</label>-->
+              <!--</div>-->
 
             </div>
 
-            <div class="col-md-6">
-              <label>Logo firma</label>
-              <div class="logo">
-                <app-file-component [(obj)]="ui" prop="companyLogo" extraClass="small"
-                                    isDisabled="{{ui.userOrCompany == 0}}"></app-file-component>
-              </div>
-            </div>
+            <!--<div class="col-md-6">-->
+              <!--<label>Logo firma</label>-->
+              <!--<div class="logo">-->
+                <!--<app-file-component [(obj)]="ui" prop="companyLogo" extraClass="small"-->
+                                    <!--isDisabled="{{ui.userOrCompany == 0}}"></app-file-component>-->
+              <!--</div>-->
+            <!--</div>-->
 
           </div>
 
@@ -174,7 +174,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">{{localizationService.language.login_screen.email}}</label>
                 <input type="text"
                        class="form-control"
                        placeholder="Email" autofocus required
@@ -202,7 +202,7 @@
 
             <div class="col-md-6">
               <div class="form-group">
-                <label for="password">Parola</label>
+                <label for="password">{{localizationService.language.login_screen.password}}</label>
                 <input type="password" class="form-control" placeholder="Password" required name="password" id="password"
                        maxlength="50"
                        required
@@ -210,8 +210,8 @@
 
                 <div class="row" *ngIf="currentForm && currentForm.controls.password && currentForm.controls.password.errors &&
               (currentForm.controls.password.dirty)">
-                  <p *ngIf="currentForm.form.controls.password.errors.required">Introduceti parola</p>
-                  <p *ngIf="currentForm.form.controls.password.errors.maxLength">Lungimea parolei este prea mare</p>
+                  <p *ngIf="currentForm.form.controls.password.errors.required">{{localizationService.language.login_screen.notp}}</p>
+                  <p *ngIf="currentForm.form.controls.password.errors.maxLength">{{localizationService.language.login_screen.pLength}}</p>
                 </div>
               </div>
               </div>
@@ -232,14 +232,14 @@
 
               <div class="col-sm-6 text-right">
                 <!--<a href="#" (click)="gotoResetPassword()">Resetare parola?</a>-->
-                <a [routerLink]="['/user/forgotPassword']">Resetare Parola</a>
+                <a [routerLink]="['/user/forgotPassword']">{{localizationService.language.login_screen.resetP}}</a>
               </div>
             </div>
           </div>
 
 
           <div class="row center">
-            <button type="submit" class="btn1 btn-primary">Creaza Utilizator
+            <button type="submit" class="btn btn-primary btn-block">{{localizationService.language.login_screen.createU}}
             </button>
             <span class="error"> {{uiMessage}}</span>
           </div>
@@ -269,9 +269,13 @@
       </form>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
     </div>
   </div>
 
 
 </div>
+
+<!--style="visibility: hidden"-->
+
+<app-filler></app-filler>

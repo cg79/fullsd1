@@ -11,12 +11,15 @@ import { FileComponentComponent } from '../../file-component/file-component.comp
 import { ForgotPasswordComponent } from '../user/forgot-password/forgot-password.component';
 import { SetNewPasswordComponent } from '../user/set-new-password/set-new-password.component';
 import { LoginComponent } from './login/login.component';
+import {ResetPasswordComponent} from './login/resetpassword/resetpassword.component';
+import { FillerComponent } from './filler/filler.component';
 
 import { userRouter } from './user.router';
 // https://angularfirebase.com/lessons/how-to-lazy-load-components-in-angular-4-in-three-steps/
+import {SharedModule } from '../footer/shared-module';
 
 @NgModule({
-  imports: [CommonModule,FormsModule,TextMaskModule,userRouter],
+  imports: [CommonModule,FormsModule,TextMaskModule,SharedModule,userRouter],
   declarations: [
     CreateUserComponent,
     // ConfirmEmailComponent,
@@ -25,7 +28,9 @@ import { userRouter } from './user.router';
     EditUserComponent,
     ForgotPasswordComponent,
     SetNewPasswordComponent,
-    LoginComponent
+    LoginComponent,
+    ResetPasswordComponent,
+    FillerComponent
   ],
 })
 export class UserModule {

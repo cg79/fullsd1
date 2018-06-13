@@ -7,6 +7,7 @@ import { FileComponentComponent } from '../../file-component/file-component.comp
 import { ForgotPasswordComponent } from '../user/forgot-password/forgot-password.component';
 import { SetNewPasswordComponent } from '../user/set-new-password/set-new-password.component';
 import { LoginComponent } from './login/login.component';
+import {ResetPasswordComponent} from './login/resetpassword/resetpassword.component';
 
 const USER_ROUTER: Routes = [
   // { path: 'load-me', component: CreateUserComponent },
@@ -30,7 +31,12 @@ const USER_ROUTER: Routes = [
   {
     path: 'forgotPassword',
     component: ForgotPasswordComponent
-  }
+  },
+  {
+    path:'resetpassword',
+    component:ResetPasswordComponent,
+    // canActivate:[AuthGuard]
+  },
 ];
 
 export const userRouter = RouterModule.forChild(USER_ROUTER );

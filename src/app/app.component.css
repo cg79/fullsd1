@@ -3,4 +3,14 @@
 }
 .main{
   background-color:  #F5F7FA;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-image: url("/assets/bgfullsd.png");
+  background-repeat: no-repeat;
 }
+
+
+
+

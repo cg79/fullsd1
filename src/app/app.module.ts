@@ -35,7 +35,7 @@ import { CoursesComponent } from './ui/courses/courses.component';
 import {SocketService} from "./services/socket/socketService";
 
 import {UtilsService} from "./services/utils/utilsService";
-import { ResetPasswordComponent } from './ui/user/login/resetpassword/resetpassword.component';
+// import { ResetPasswordComponent } from './ui/user/login/resetpassword/resetpassword.component';
 import { ConfirmEmailComponent } from './ui/user/confirm-email/confirm-email.component';
 
 
@@ -46,6 +46,8 @@ import { ShowContactDialogComponent } from './contact/show-contact-dialog/show-c
 import {SharedModule } from './ui/footer/shared-module';
 
 // import * as $ from 'jquery';
+import { SimpleNotificationsModule } from 'angular2-notifications';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 let providers = {
 
@@ -64,7 +66,7 @@ let providers = {
     HeaderComponent,
     TypoComponent,
     HomePresentationComponent,
-    ResetPasswordComponent,
+    // ResetPasswordComponent,
     // FooterComponent,
     CoursesComponent,
     ConfirmEmailComponent,
@@ -79,6 +81,7 @@ let providers = {
     Angular2SocialLoginModule,
     AppRoutingModule,
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     LocalStorageModule.withConfig({
       prefix: 'my-app',
@@ -86,7 +89,8 @@ let providers = {
     }),
     HttpModule,
     ModalModule.forRoot(),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    SimpleNotificationsModule.forRoot()
   ],
 
   providers: [HttpWrapperService, AuthGuard,PubSubService, SocketService, UtilsService, LocalizationService, NewsService ],

@@ -5,6 +5,15 @@
 export default new class Language {
 
   RO: any = {
+    who:{
+      who:"Cine Suntem",
+      n1:"Claudiu Gombos",
+      n1Desc:"Arhitect, certificari obtinute, programator, coordonator si trainer",
+      n2:"Ioan Lazar",
+      n2Desc: "Cadru didactic, programator, coordonator, consultant si arhitect",
+      echipa:"Echipa",
+      echipaDesc:"Toti participantii la cursuri au facut progrese enorme, sunt apreciati si entuziasmati sa participe la realizarea produselor soft.Oferim sprijin pentru integrarea intr-o echipa atat a participantilor la curs cat si programatorilor care ar dorii sa muncim impreuna"
+    },
     h:{
       dev:"Avand o experienta semnificativa in realizarea produselor soft, oferim mentenanta, crearea in totalitate a unui produs soft, fie el desktop, web sau aplicatie pentru telefoane. Calitatea serviciilor de soft este asigurata de implementarea celor mai noi metodologii, experienta noastra si comunicare cat mai rapida",
       training:"Oferim training pentru imbunatatirea cunostintelor intr-o echipa, uniformizarea metodelor de lucru, folosirea celor mai noi si performante concepte de implementare a unui soft.   Consultanta in abordarea cat mai corecta a principiilor de dezvoltare a unui soft, arhitectura acestuia ,rezultatul fiind o productivitate crescuta asigurandu-se astfel si calitatea produsului Incercam sa ne adaptam cat mai bine cerintelor, printr-o cat mai buna comunicare, documentatie, suport",
@@ -25,7 +34,8 @@ export default new class Language {
       name: "Nume",
       email:"Email",
       send:"Trimite",
-      sendbtn:"Trimite Mesaj"
+      sendbtn:"Trimite Mesaj",
+      sent:"Mesajul a fost trimis"
     },
     edu:{
       level1:"Incepator",
@@ -163,7 +173,11 @@ export default new class Language {
       "password": "Parola",
       "forgot": "Am uitat parola",
       "login": "Logare",
-      "remember": "pastreaza parola pe acest calculator"
+      "remember": "pastreaza parola pe acest calculator",
+      "notp":"Introduceti parola",
+      "pLength":"Lungimea parolei este prea mare",
+      "resetP":"Resetare Parola",
+      "createU":"Creare Utilizator"
     },
     "create_user_screen": {
       "title": "Utilizator nou",
@@ -177,7 +191,10 @@ export default new class Language {
       "confirm": "Confirmare Parola",
       "create_user": "Inregistrare",
       "have_account": "Ai cont?",
-      "login_here": "Ecranul de logare"
+      "login_here": "Ecranul de logare",
+      "pf":"Persoana Fizica",
+      "company":"Firma",
+      "cmpName":"Nume Firma"
     },
     "change_password_screen": {
       "title": "Schimbare Parola",
@@ -207,6 +224,15 @@ export default new class Language {
     }
   };
   EN: any = {
+    who:{
+      who:"Who We Are",
+      n1:"Claudiu Gombos",
+      n1Desc:"Architect, certifications, programmer, coordinator and trainer",
+      n2:"Ioan Lazar",
+      n2Desc: "Teacher, programmer, coordinator, consultant and architect",
+      echipa:"The team",
+      echipaDesc:" All participants in the courses have made enormous advances, are appreciated and excited to participate in the development of soft products. We offer support for integrating into a team of both course participants and programmers who want to work together"
+    },
     h:{
       dev:"Having a significant experience in software development, we offer maintenance, complete creation of a software product, whether desktop, web or phone application. The quality of software services is ensured by implementing the latest methodologies, experience and communication as quickly as possible",
       training:"We offer training to improve knowledge in a team, standardize work methods, use the latest and most advanced software implementation concepts. Consultancy in the correct approach to the principles of software development, its architecture, resulting in increased productivity, thus ensuring the quality of the product. We try to adapt our requirements as best as possible, through the best communication, documentation, support",
@@ -227,7 +253,8 @@ export default new class Language {
       name: "Name",
       email:"Email",
       send:"Send",
-      sendbtn:"Send Message"
+      sendbtn:"Send Message",
+      sent:"The message has been sent"
     },
     edu:{
       level1:"Beginer",
@@ -362,7 +389,11 @@ export default new class Language {
       "password": "Password",
       "forgot": "Forgot Password",
       "login": "Login",
-      "remember": "Remember password on this computer"
+      "remember": "Remember password on this computer",
+      "notp":"Enter your password",
+      "pLength":"Password length is to big",
+      "resetP":"Reset Password",
+      "createU":"Create User"
     },
     "create_user_screen": {
       "title": "New User",
@@ -376,7 +407,10 @@ export default new class Language {
       "confirm": "Confirm Password",
       "create_user": "Register",
       "have_account": "Already have an account?",
-      "login_here": "Login screen"
+      "login_here": "Login screen",
+      "pf":"Personal",
+      "company":"Company",
+      "cmpName":"Company Name"
     },
     "change_password_screen": {
       "title": "Change Password",

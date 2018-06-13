@@ -42,25 +42,23 @@
     <nav id="navbar-main" class="navbar1 main-menu1 navbar-default1">
       <!--Brand and toggle get grouped for better mobile display-->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"
-        aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        </button>
-        <button class="navbar-toggler1 navbar-toggle collapsed" type="button" (click)="toggleCollapsed()"
-                data-toggle="collapse" data-target="#navbar-collapse-1"
-                aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" ngToggler></span>
-          <i class="fa fa-bars d-icon d-icon-bars" aria-hidden="true"></i>
+        <button type="button"
+                class="navbar-toggle collapsed"
+                data-target="#navbar-collapse-1"
+                aria-expanded="false"
+                (click)="isCollapsed = !isCollapsed">
+
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand1 " href="#">
           <img src="assets/logo.png" alt="Brand" class="img-responsive"/>
         </a>
       </div>
       <!--Collect the nav links, and other content for toggling-->
-      <ul class="collapse navbar-collapse" id="navbar-collapse-1" [ngbCollapse]="isCollapsed" >
+      <ul class="collapse navbar-collapse" id="navbar-collapse-1" [ngbCollapse]="isCollapsed">
         <ul class="nav navbar-nav navbar-right">
           <li class="navli">
             <a routerLink="/home" routerLinkActive="active"><span><i class="ficon fa fa-home" aria-hidden="true"></i>{{localizationService.language.menu.home}}</span></a>

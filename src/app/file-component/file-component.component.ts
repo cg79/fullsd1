@@ -97,14 +97,14 @@ export class FileComponentComponent  {
 
   _setActive() {
     this.borderColor = this.activeColor;
-    if (this.imageSrc && this.imageSrc.length === 0) {
+    if (this.imageSrc && this.imageSrc && this.imageSrc.length === 0) {
       this.iconColor = this.activeColor;
     }
   }
 
   _setInactive() {
     this.borderColor = this.baseColor;
-    if (this.imageSrc && this.imageSrc.length === 0) {
+    if (this.imageSrc && this.imageSrc && this.imageSrc.length === 0) {
       this.iconColor = this.baseColor;
     }
   }
@@ -117,7 +117,7 @@ export class FileComponentComponent  {
     //   this.fileClass = `uploader isDisabled ${this.extraClass}`;
     // }
     try {
-      if (this.obj && this.prop) {
+      if (this.obj && this.prop &&  this.obj[this.prop]) {
         this.imageSrc = this.obj[this.prop];
       }
     }

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent }  from '../home/home.component';
 import { NotFoundComponent }    from '../not-found/notfound.component';
-import {ResetPasswordComponent} from "../ui/user/login/resetpassword/resetpassword.component";
+// import {ResetPasswordComponent} from "../ui/user/login/resetpassword/resetpassword.component";
 import {AuthGuard} from "./auth-guard.service";
 import {CoursesComponent} from "../ui/courses/courses.component";
 import {ConfirmEmailComponent} from "../ui/user/confirm-email/confirm-email.component";
@@ -52,11 +52,11 @@ const appRoutes: Routes = [
   //   component:CreateUserComponent
   // },
 
-  {
-    path:'resetpassword',
-    component:ResetPasswordComponent,
-    canActivate:[AuthGuard]
-  },
+  // {
+  //   path:'resetpassword',
+  //   component:ResetPasswordComponent,
+  //   canActivate:[AuthGuard]
+  // },
   { path: 'user', loadChildren: '../ui/user/user-module#UserModule'},
   // { path: 'user', loadChildren: () => UserModule},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },

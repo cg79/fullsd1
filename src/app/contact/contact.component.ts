@@ -4,6 +4,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import {LocalizationService} from "../services/localization/localization.service";
 import {LocalStorageService} from "angular-2-local-storage";
 import { HttpWrapperService } from '../services/http/httpService';
+import {NotificationsService} from "angular2-notifications";
 
 @Component({
   selector: 'app-contact',
@@ -22,7 +23,8 @@ export class ContactComponent implements OnInit {
   constructor(public bsModalRef: BsModalRef,
               public localizationService: LocalizationService,
               private localStorageService: LocalStorageService,
-              private httpService: HttpWrapperService) { }
+              private httpService: HttpWrapperService,
+              protected notificationsService: NotificationsService ) { }
 
   ngOnInit() {
     const localStorageUser = this.localStorageService.get('user');
@@ -51,6 +53,14 @@ export class ContactComponent implements OnInit {
     // this.action.emit(true);
     const xxx = this.httpService.postJson('api/pub', request);
     this.bsModalRef.hide();
+    const toast = this.notificationsService.success(this.localizationService.language.contactFrm.sent, '', {
+      timeOut: 2000,
+      showProgressBar: false,
+      pauseOnHover: false,
+      clickToClose: false
+    });
+    // this.notificationsService.remove();
+
   }
 
 }
